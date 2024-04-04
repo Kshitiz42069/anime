@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities{
+  .nav{
+    @apply bg-transparent hover:lg:text-3xl ml-[1rem] hover:underline underline-offset-8;
+  }
+  .temp{
+    @apply bg-white mt-[3rem] w-[20rem] md:w-[40rem] lg:w-[50rem] ml-[2rem] md:ml-[4rem] p-[1rem] rounded-xl border-[4px] hover:border-[#D5005B];
+  }
+  .news{
+    @apply flex flex-col md:flex-row gap-[2rem] justify-between items-center md:mx-[3rem] mt-[2rem];
+  }
+  .form{
+    @apply flex rounded-xl flex-col justify-evenly w-[21rem] md:w-3/4 h-[30rem] border-[2px] border-white items-center hover:border-[#D5005B] text-start;
+  }
+  .tag{
+    @apply md:flex md:flex-row text-sm gap-[1rem] md:gap-[5rem] md:w-[40rem] md:mr-[4rem] md:mt-[1rem] mt-[6rem] mr-[3rem] md:pb-0 tracking-widest pb-[2rem] text-white justify-evenly items-center;
+  }
+}
+
+@keyframes fadein{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.word-animation{
+  opacity: 0;
+  animation: fadein 4s ease forwards infinite;
+}
+
+.word-animation:nth-child(1){ animation-delay: 0s;}
+.word-animation:nth-child(2){ animation-delay: 1s;}
+.word-animation:nth-child(3){ animation-delay: 2s;}
